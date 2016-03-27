@@ -21,7 +21,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'groupdate'
 gem 'figaro'
 
-gem 'paperclip', '~>3.0'
+gem 'paperclip', github: 'thoughtbot/paperclip'
 gem 'aws-sdk'
 
 # Use jquery as the JavaScript library

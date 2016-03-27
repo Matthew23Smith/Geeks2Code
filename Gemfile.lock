@@ -1,3 +1,14 @@
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: 9bdc0a00bfb43c9afef7e992a0cf7f55d93a5c27
+  specs:
+    paperclip (5.0.0.beta1)
+      activemodel (>= 4.2.0)
+      activesupport (>= 4.2.0)
+      cocaine (~> 0.5.5)
+      mime-types
+      mimemagic (~> 0.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,17 +113,13 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.99.1)
+    mimemagic (0.3.1)
     mini_portile2 (2.0.0)
     minitest (5.8.4)
     multi_json (1.11.2)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     orm_adapter (0.5.0)
-    paperclip (3.5.4)
-      activemodel (>= 3.0.0)
-      activesupport (>= 3.0.0)
-      cocaine (~> 0.5.3)
-      mime-types
     pg (0.18.4)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -208,7 +215,7 @@ DEPENDENCIES
   groupdate
   jbuilder (~> 2.0)
   jquery-rails
-  paperclip (~> 3.0)
+  paperclip!
   pg (~> 0.18.4)
   rails (= 4.2.4)
   rails_12factor (~> 0.0.3)
