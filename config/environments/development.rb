@@ -8,7 +8,8 @@ Rails.application.configure do
   config.time_zone = "Pacific Time (US & Canada)"
   # Do not eager load code on boot.
   config.eager_load = false
-
+  config.action_mailer.delivery_method = :test
+  config.action_mailer.default_url_options = { :host => 'http://dreamreverie-167369.nitrousapp.com:3000'}
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
