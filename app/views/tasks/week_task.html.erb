@@ -17,10 +17,10 @@
           </tr>
         </thead>
         <div align="center">
-
+          <%= will_paginate %>
         </div>
         <tbody>
-          <% @task_months.each do |task| %>
+          <% @tasks.each do |task| %>
             <tr>
               <td><%= link_to task.name, task %></td>
               <%if task.due_date? %>
