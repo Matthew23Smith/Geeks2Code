@@ -22,14 +22,15 @@ Rails.application.configure do
     :enable_starttls_auto => true
   }
 
-  config.paperclip_defaults = {
-      :storage => :s3,
-      :s3_credentials => {
-        :bucket => ENV['S3_BUCKET_NAME'],
-        :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
-        :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
-      }
-    }
+  #Sets paperclip to upload images to amazon S3
+   config.paperclip_defaults = {
+     :storage => :s3,
+     :s3_credentials => {
+       :bucket => ENV['S3_BUCKET_NAME'],
+       :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+       :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY']
+     }
+   }
 
   # Eager load code on boot. This eager loads most of Rails and
   # your application in memory, allowing both threaded web servers

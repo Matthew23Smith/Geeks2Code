@@ -21,9 +21,8 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'groupdate'
 gem 'figaro'
 
-gem 'paperclip', '~> 4.1'
+gem 'paperclip', '~>3.0'
 gem 'aws-sdk'
-gem 'fog'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
