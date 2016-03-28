@@ -9,11 +9,13 @@
     <div class="navbar-collapse collapse navbar-responsive-collapse">
       <ul class="nav navbar-nav">
         <% if user_signed_in? %>
-          <li><%= link_to "Tasks", tasks_path %></li>
-        <li><%= link_to "Complete Tasks", complete_task_path %></li>
-        <li><%= link_to "Incomplete Tasks", due_path %></li>
-        <li><%= link_to "This Week Tasks", week_path %></li>
-        <li><%= link_to "Todays Tasks", today_path %></li>
+          <li><%= link_to "All Tasks", tasks_path %></li>
+        <li><%= link_to "All Complete", complete_task_path %></li>
+        <li><%= link_to "All Incomplete", due_path %></li>
+        <li><%= link_to "This Week", week_path %></li>
+        <li><%= link_to "Today All", today_path %></li>
+        <li><%= link_to "Today Incomplete", today_incomplete_path %></li>
+        <li><%= link_to "Today Incomplete", today_complete_path %></li>
         <% end %>
       </ul>
       <ul class="nav navbar-nav navbar-right">

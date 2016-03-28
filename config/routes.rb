@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'due' => 'tasks#not_complete_task'
   get 'week' => 'tasks#week_task'
   get 'today' => 'tasks#day_task'
+  get 'today_incomplete' => 'tasks#day_task_not_complete'
+  get 'today_complete' => 'tasks#day_task_complete'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

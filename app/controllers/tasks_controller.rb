@@ -20,8 +20,15 @@ class TasksController < ApplicationController
   end
 
   def day_task
-    @tasks = Task.order(:due_date)
-    @task_day = @tasks.where('due_date >= ? AND due_date <= ? AND user_id = ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day, current_user.id)
+    @tasks = Task.order(:due_date).where('due_date >= ? AND due_date <= ? AND user_id = ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day, current_user.id).paginate(page: params[:page], per_page: 10)
+  end
+
+  def day_task_not_complete
+    @tasks = Task.order(:due_date).where('due_date >= ? AND due_date <= ? AND user_id = ? AND status = ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day, current_user.id, false).paginate(page: params[:page], per_page: 10)
+  end
+  
+  def day_task_complete
+    @tasks = Task.order(:due_date).where('due_date >= ? AND due_date <= ? AND user_id = ? AND status = ?', DateTime.now.beginning_of_day, DateTime.now.end_of_day, current_user.id, true).paginate(page: params[:page], per_page: 10)
   end
 
 
