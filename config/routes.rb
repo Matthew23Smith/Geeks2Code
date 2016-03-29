@@ -8,10 +8,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'pages#index'
 
-  get 'complete_task' => 'tasks#complete_task'
-  get 'due' => 'tasks#not_complete_task'
-  get 'week' => 'tasks#week_task'
-  get 'today' => 'tasks#day_task'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

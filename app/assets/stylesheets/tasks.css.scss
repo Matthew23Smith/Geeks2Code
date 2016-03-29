@@ -1,0 +1,306 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+
+
+// ------------------------------------------------------------
+// -------------------- Default Setting & Font Sizes
+
+h1 {
+  font-size: 5em;
+}
+.logout {
+  padding: 8px 25px !important;
+  border: #fff 1px solid;
+  border-radius: 25px;
+}
+section {
+  padding: 3em 0;
+}
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+  position: relative;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 500;
+  color: #fff;
+  background-color: #dfe5ec;
+ }
+.btn-purple,
+.btn-purple:link,
+.btn-purple:visited {
+    background-color: #9b59b6;
+    color: #fff;
+}
+.btn-purple:hover,
+.btn-purple:active {
+  background-color: #804399;
+  color: #fff;
+}
+
+
+// ------------------------------------------------------------
+// -------------------- Header & Navbar
+
+.navbar {
+  padding-top: 20px;
+  font-weight: 300;
+}
+
+.navbar-brand {
+  color: white;
+}
+.navbar-nav>li>a {
+  color: #fff;
+  padding: 15px 31px;
+}
+.navbar li a:hover {
+  color: #555;
+  background: none;
+}
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+.navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+    color: #fff;
+}
+header {
+  background-image: asset-data-url("tasks-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  height: 400px;
+  width: 100%;
+  position: relative;
+}
+header h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+  // ------------------------------------------------------------
+  // -------------------- Profile Card
+
+  .profile-card {
+    border: #ecf0f1 1px solid;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0;
+
+  }
+  .profile-card .profile {
+    text-align: center;
+    color: #555;
+    padding: 2em 0 0 0;
+  }
+  .profile-card .profile p {
+    padding: 8px;
+  }
+  .profile-card .profile img {
+    border-radius: 50%;
+    border: 1.5px red solid;
+    width: 75px;
+    height: 75px;
+  }
+  .profile-card .counter {
+    border-top: 1px solid #e2e8ea;
+    color: #555;
+    padding: auto 2em;
+    text-align: center;
+    height: auto;
+  }
+  .profile-card .counter .total {
+    float: left;
+    width: 50%;
+    padding: 0.7em 0;
+    border-right: #e2e8ea solid 1px;
+    margin: 0;
+    font-size: 10px;
+  }
+  .profile-card .counter .complete {
+    float: right;
+    width: 50%;
+    padding: 0.7em 0;
+    margin: 0;
+    font-size: 10px
+  }
+  .profile-card .button {
+    border-top: 1px solid #e2e8ea;
+    border-bottom: 1px solid #e2e8ea;
+    padding: 2em;
+  }
+  .profile-card .button .btn {
+    margin: 0 auto;
+    display: block;
+    width: 60%;
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    background-color: #099fff;
+  }
+  .profile-card .button .btn:hover {
+    background-color: #006db3;
+  }
+  .profile-card .social ul {
+    list-style: none;
+    color: #555;
+    padding: 0;
+    margin: 0;
+  }
+  .profile-card .social ul li {
+    display: inline-block;
+    width: 32%;
+    text-align: center;
+    padding: 0.8em;
+    border-left: 1px solid #e2e8ea;
+    margin: 0;
+    font-size: 1.2em;
+  }
+  .profile-card .social ul li:first-child {
+    border: none;
+  }
+
+
+
+
+  // ------------------------------------------------------------
+  // -------------------- Menu Display Panes
+
+  .task-list {
+
+  }
+  .display-nav {
+    background-color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    }
+
+  .display-nav li {
+    float: none;
+    display: inline-block;
+    padding: 1em;;
+  }
+  .display-nav li a,
+  .display-nav li a:link,
+  .display-nav li a:visited {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    float: left;
+    color: #abb2b7
+  }
+  .display-nav li a:hover,
+  .display-nav li a:active {
+    background-color: white;
+    color: #099fff;
+  }
+  .display-nav li:after{
+    content: '\00B7';
+    padding-right: 5px;
+    color: #555;
+    float: right;
+    padding: 10px 0px;
+    padding-left: 50px;
+  }
+  .display-nav li:after{
+    content: '\00B7';
+    padding-right: 5px;
+    color: #555;
+    float: right;
+    padding: 10px 0px;
+    padding-left: 50px;
+  }
+  .display-nav li:last-child::after {
+    content: ''
+    }
+
+// ------------------------------------------------------------
+// -------------------- Panes listing
+
+  .tab-content {
+    background-color: #fff;
+    padding: 5em;
+    margin: 1em 0;
+    max-height: 700px;
+    overflow: scroll;
+  }
+.tab-content .task {
+    width: 90%;
+    height: 100px;
+    margin: 0 auto;
+}
+.tab-content .task img {
+    max-width: 30px;
+    float: left;
+}
+.tab-content .task .task-name {
+    text-align: left;
+    width: 50%;
+    margin: 0;
+    display: block;
+    float: left;
+    vertical-align: middle;
+    padding-top: 5px;
+    padding-left: 3em;
+}
+.tab-content .task .task-name:hover,
+.tab-content .task .task-name:active {
+  background-color: white;
+  text-decoration: none;
+  color: #099fff;
+
+}
+.tab-content .task .duedate {
+    color: #555;
+    display: block;
+    width: 100px;
+    margin: 0;
+    float: left;
+    width: auto;
+    padding-top: 5px;
+}
+.tab-content .task .btn {
+  float: right;
+  width: 20%;
+}
+
+
+
+
+.latest-task {
+  background-color: #fff;
+min-height: 300px;
+margin: 2em 0;
+color: #555;
+border-radius: 6px;
+
+}
+
+.latest-task .title {
+  border-bottom: 1px silver solid;
+padding: 1.5em 0 0.5em 2em;
+}
+.latest-task .title p {
+  font-size: 0.9em;
+}
+.latest-task .body {
+  padding: 1em 2em 0 2em;
+    height: 100%;
+}
+.latest-task .body h3 {
+  font-size: 15px;
+}
