@@ -93,7 +93,7 @@
                 <%= link_to task.name, task, class: "task-name" %>
                 <p class="duedate"><%= task.due_date.strftime("%B %d, %Y") %></p>
                 <%= link_to 'Update', edit_task_path(task), class: 'btn btn-purple' %>
-                
+
               </div>
               <% end %>
             </div>

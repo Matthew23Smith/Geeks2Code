@@ -57,6 +57,7 @@
         <div class="col-md-9 task-list">
           <div class="form-container">
             <%= render 'form' %>
+            <%= link_to "delete", [@task], :method  => :delete, class: 'btn btn-purple' %>
           </div>
         </div>
 
